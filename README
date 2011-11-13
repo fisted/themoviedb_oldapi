@@ -5,6 +5,7 @@ install : python setup.py install
           easy_install themoviedb
 Usage:
     import tmdb
+    tmdb.configure(write_your_apikey) # new configuration function. thanks @georgedorn :)
     movie = tmdb.search("Fight Club")
     #movie[0].keys()
     movie[0]["rating"]
