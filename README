@@ -1,11 +1,18 @@
 #TODO: Add redis and memcached support
+#
+
+This version support other languages than english. Just add the 2-letters language code you want (ISO 639-1).
+If you don't provide one, English is the default
 
 install : python setup.py install 
           or
           easy_install themoviedb
 Usage:
     import tmdb
-    tmdb.configure(write_your_apikey) # new configuration function. thanks @georgedorn :)
+    # For other language than English
+    tmdb.configure(write_your_apikey, "fr") # new configuration function. thanks @georgedorn :)
+    # otherwise
+    # tmdb.configure(write_your_apikey) is English default
     movie = tmdb.search("Fight Club")
     #movie[0].keys()
     movie[0]["rating"]
